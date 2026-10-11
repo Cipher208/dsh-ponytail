@@ -102,5 +102,7 @@ is not required for this fix, which is one literal and one declaration.
 
 ## Upstream
 
-This fix is offered upstream. Until it lands there, installing upstream `0.4.1` on DSH `0.2.0-rc.2` or later
-reproduces the failure above.
+This fix is reported upstream as **issue #3**
+(<https://github.com/MengYuil/dsh-ponytail/issues/3>) — the problem and the solution, with no pull request
+attached, and the judgement left to the author. Until it lands there, installing upstream `0.4.1` on DSH
+`0.2.0-rc.2` or later reproduces the failure above.
