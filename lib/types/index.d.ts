@@ -17,6 +17,19 @@ import type { Context } from '@deepseek-ai/cordis';
 export declare const name = "ponytail";
 export declare const inject: string[];
 /**
+ * Durable attribution for ponytail's own notices. Declared here so the shipped
+ * declaration matches the source; the V4 admission layer refuses the retired
+ * `plugin` wrapper.
+ */
+export interface PonytailMessageSource {
+    readonly kind: 'ponytail';
+}
+declare module '@deepseek-ai/dsh-llm' {
+    interface MessageSourceMap {
+        ponytail: PonytailMessageSource;
+    }
+}
+/**
  * Cordis profile-level configuration (set per profile via the bundle row's
  * `config` in a profile patch). `defaultMode` sits between the environment
  * variable and the user config file in the default-resolution chain.
